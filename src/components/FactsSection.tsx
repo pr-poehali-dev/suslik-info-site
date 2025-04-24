@@ -1,12 +1,30 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Paw, Leaf, Mountain, Timer } from "lucide-react";
+import { Leaf, Mountain, Timer } from "lucide-react";
+
+// Создаем кастомную иконку лапы вместо Paw
+const PawIcon = () => (
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="2" 
+    className="h-8 w-8 text-amber-600"
+  >
+    <path d="M22 16c-1-4-4-7-8-7s-7 3-8 7"></path>
+    <path d="M8 2c1 3 0 6-3 7 3 1 4 4 3 7"></path>
+    <path d="M16 2c-1 3 0 6 3 7-3 1-4 4-3 7"></path>
+    <circle cx="9" cy="10" r="2"></circle>
+    <circle cx="15" cy="10" r="2"></circle>
+  </svg>
+);
 
 const facts = [
   {
     title: "Особенности",
     description: "Суслики являются дневными животными с отличным зрением. Они общаются через систему свистов и щелканий для предупреждения об опасности.",
-    icon: <Paw className="h-8 w-8 text-amber-600" />,
+    icon: <PawIcon />,
   },
   {
     title: "Питание",
