@@ -3,7 +3,56 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Globe, Tree, Mountain, Droplets } from "lucide-react";
+import { Globe } from "lucide-react";
+
+// Создаем кастомные иконки
+const TreeIcon = () => (
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="2" 
+    strokeLinecap="round" 
+    strokeLinejoin="round" 
+    className="h-6 w-6 text-amber-700 flex-shrink-0 mt-1"
+  >
+    <path d="M17 22v-2"></path>
+    <path d="M12 2l-5.22 4.9a5.8 5.8 0 0 0-1.88 4.83 5.8 5.8 0 0 0 2.2 3.37A5.8 5.8 0 0 0 12 17a5.8 5.8 0 0 0 4.9-1.9 5.8 5.8 0 0 0 2.2-3.37 5.8 5.8 0 0 0-1.9-4.83L12 2Z"></path>
+    <path d="M12 22v-5"></path>
+  </svg>
+);
+
+const MountainIcon = () => (
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="2" 
+    strokeLinecap="round" 
+    strokeLinejoin="round" 
+    className="h-6 w-6 text-amber-700 flex-shrink-0 mt-1"
+  >
+    <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path>
+  </svg>
+);
+
+const DropletsIcon = () => (
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="2" 
+    strokeLinecap="round" 
+    strokeLinejoin="round" 
+    className="h-6 w-6 text-amber-700 flex-shrink-0 mt-1"
+  >
+    <path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"></path>
+    <path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"></path>
+  </svg>
+);
 
 const Habitat = () => {
   return (
@@ -56,7 +105,7 @@ const Habitat = () => {
             <Card className="bg-amber-100 border-amber-200">
               <CardContent className="pt-6">
                 <div className="flex items-start gap-3 mb-4">
-                  <Tree className="h-6 w-6 text-amber-700 flex-shrink-0 mt-1" />
+                  <TreeIcon />
                   <h3 className="text-xl font-medium text-amber-800">Растительность</h3>
                 </div>
                 <p className="text-amber-900">
@@ -70,7 +119,7 @@ const Habitat = () => {
             <Card className="bg-amber-100 border-amber-200">
               <CardContent className="pt-6">
                 <div className="flex items-start gap-3 mb-4">
-                  <Mountain className="h-6 w-6 text-amber-700 flex-shrink-0 mt-1" />
+                  <MountainIcon />
                   <h3 className="text-xl font-medium text-amber-800">Рельеф</h3>
                 </div>
                 <p className="text-amber-900">

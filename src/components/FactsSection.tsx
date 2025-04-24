@@ -1,8 +1,8 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Leaf, Mountain, Timer } from "lucide-react";
+import { Leaf, Timer } from "lucide-react";
 
-// Создаем кастомную иконку лапы вместо Paw
+// Создаем кастомные иконки
 const PawIcon = () => (
   <svg 
     xmlns="http://www.w3.org/2000/svg" 
@@ -20,6 +20,21 @@ const PawIcon = () => (
   </svg>
 );
 
+const MountainIcon = () => (
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="2" 
+    strokeLinecap="round" 
+    strokeLinejoin="round" 
+    className="h-8 w-8 text-amber-600"
+  >
+    <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path>
+  </svg>
+);
+
 const facts = [
   {
     title: "Особенности",
@@ -34,7 +49,7 @@ const facts = [
   {
     title: "Ареал обитания",
     description: "Суслики распространены в степях, лугах и полупустынях Евразии и Северной Америки. Они предпочитают открытые пространства.",
-    icon: <Mountain className="h-8 w-8 text-amber-600" />,
+    icon: <MountainIcon />,
   },
   {
     title: "Жизненный цикл",
